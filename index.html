@@ -4,36 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="index.js"></script>
+    
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body style="background-color: aliceblue; padding: 10px;">
-    <div class="container text-center">
-        <div class="row">
-        <table class="col-md-12 " >
+    <div class="container">
+        <div class="row ">
+        <table class="col-md-12  text-center" >
             <thead >
             <tr>
-                <th>Appointments</th>
+                <th>Appointment Date</th>
                 <th>Time</th>
                 <th >Appointment Type</th>
                 
             </tr></thead>
             <tbody><tr>
                 <td><input type="date" id="ApDate"></td>
-                <td><input type="time" id="Aptime"></td>
+                <td><input type="time" id="ApTime"></td>
                 <td><input type="text" id="ApText"></td>
                 
         </tbody>
         </table>
-        <div class="col-sm-1; "><button class="btn btn-secondary" id="submitButton" value="submit">Submit</button></div>
+        <div class="col-sm; row;" style="border: 2px solid black; border-top-width: 0px; padding: 10px;">
+            <button class="btn btn-primary" style="text-align: left; " id="submitButton">Submit</button>
+        </div>
     </div>
-    </div>
-    <div id="contentTable">
-        
+    </div><br>
+    <div  class="container">
+        <div class="row">
+            <table class="col-md-12" id="list" style="background-color: rgb(50, 50, 50); color: antiquewhite;">
+                <div>
+                    <thead >
+                        <tr>
+                            <th>Appointment Date</th>
+                            <th>Time</th>
+                            <th>Date Created</th>
+                            <th>Appointment Type</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                </div>
+                <tbody id="contentTable">
+
+                </tbody>
+            </table>
+        </div>
     </div>
     
-    
+    <script src="index.js"></script>
 </body>
 </html>
