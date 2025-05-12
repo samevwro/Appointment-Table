@@ -4,7 +4,7 @@ document.getElementById('submitButton').addEventListener('click', () => {
     let createdDate = new Date();
     let table = document.getElementById('contentTable');
     let row = table.insertRow(0);
-    row.setAttribute('id', `item-${id}`);
+    row.setAttribute('id', id);
     row.insertCell(0).innerHTML = document.getElementById('ApDate').value;
     row.insertCell(1).innerHTML = document.getElementById('ApTime').value;
     row.insertCell(2).innerHTML = `${createdDate.getMonth() + 1}/${createdDate.getDate()}/${createdDate.getFullYear()}`;
@@ -21,7 +21,7 @@ function deleteButton(id) {
     btn.innerHTML = 'Delete';
     btn.onclick = () => {
         let elementToDelete = document.getElementById(id);
-        elementToDelete.parenetNode.removeChild(elementToDelete);
+        elementToDelete.remove()
 };
 return btn;
 }
